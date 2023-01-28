@@ -1,4 +1,4 @@
-import { baseUrl, eventsQuantity } from '/src/scripts/variables.js';
+import { baseUrl, eventsQuantity } from '../variables.js';
 
 async function getEvents(userName) { // busca os dados do usuário
   const response = await fetch(`${baseUrl}/${userName}/events?per_page=${eventsQuantity}`);
