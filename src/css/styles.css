@@ -160,7 +160,7 @@ main {
   color: #fff
 }
 
-.container .profile-data .repositories ul li a .info-repo{
+.container .profile-data .repositories ul li a ul {
   display: flex;
   gap: 5px 10px;
   justify-content: center;
@@ -168,7 +168,7 @@ main {
   text-transform: initial;
 }
 
-.container .profile-data .repositories ul li a .info-repo p {
+.container .profile-data .repositories ul li a ul li {
   background-color: hsl(251, 42%, 55%);
   border-radius: 5px;
   padding: 10px;
@@ -186,6 +186,10 @@ main {
 
 .container .profile-data .events ul li strong {
   font-weight: bold;
+}
+
+.container .profile-data .events.section{
+  padding-top: 0;
 }
 
 .container .profile-data.hide{
@@ -217,19 +221,26 @@ main {
   }
 }
 
-@media (max-width: 550px) {
+@media (max-width: 425px) {
   main {
     padding: 15% 0;    
   }
 
-  .container .profile-data .info img{
-    margin-bottom: 20px;
-  }
-
-  .container .profile-data .info img,
   .container .profile-data .info .data
   {
+    margin-top: 20px;
     width: 100%;
     padding: 0;
+  }
+
+  .container .profile-data .info img{
+    width: 100%;
+  }
+}
+
+@media (max-width: 376px) {
+  .container .profile-data .info img{
+    max-width: 300px;
+    margin: 0 auto;
   }
 }
