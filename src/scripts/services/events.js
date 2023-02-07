@@ -1,7 +1,7 @@
-import { baseUrl, eventsQuantity } from '../variables.js';
+import { baseUrl, maxItems } from '../variables.js';
 
 async function getEvents(userName) { // busca os dados do usuário
-  const response = await fetch(`${baseUrl}/${userName}/events?per_page=${eventsQuantity}`);
+  const response = await fetch(`${baseUrl}/${userName}/events?per_page=${maxItems}`);
   return await response.json();
 
 }

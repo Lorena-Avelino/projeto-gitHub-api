@@ -6,16 +6,14 @@ import { user } from "./objects/user.js";
 import { screen } from "./objects/screen.js";
 
 document.getElementById("btn-search").addEventListener("click", () => {
-  //pesquisar ao pressionar o botão "Buscar"
   const userName = document.getElementById("input-search").value;
   if(validateEmptyInput(userName)) return;
   getUserData(userName);
 });
 
 document.getElementById("input-search").addEventListener("keyup", (event) => {
-  //pesquisar quando pressionar a tecla "Enter" do teclado
   const userName = event.target.value;
-  const key = event.which || event.keyCode; //pegar o código da chave que foi clicada
+  const key = event.which || event.keyCode;
   const isEnterKeyPressed = key === 13;
 
   if (isEnterKeyPressed) {
